@@ -1,4 +1,17 @@
-<!doctype html>
+{%extends 'base.html'%} {% block title %} Home {% endblock %} {% block content%}
+<h1>Welcome to my blog</h1>
+<h2>Latest Post</h2>
+
+{% for post in posts %}
+<div>
+  <h3>{{post.title}}</h3>
+  <p>{{post.content}}</p>
+  <h3>Category: {{post.category.name}}</h3>
+  <p>At {{post.created_at}} by {{post.author}}</p>
+</div>
+{% endfor %} {% endblock %}
+
+<!-- <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,4 +30,4 @@
     </div>
     {% endfor %}
   </body>
-</html>
+</html> -->

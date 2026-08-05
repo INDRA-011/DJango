@@ -35,5 +35,3 @@ media/
 build/
 dist/
 *.egg-info/
-
-secrets.txt
